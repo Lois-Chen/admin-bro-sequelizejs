@@ -14,6 +14,7 @@ const TYPES_MAPPING = [
   ['ENUM', 'string'],
   ['ARRAY', 'array'],
   ['JSON', 'object'],
+  ['JSONTYPE', 'object'],
   ['JSONB', 'object'],
   ['BLOB', 'string'],
   ['UUID', 'string'],
@@ -32,7 +33,7 @@ class Property extends BaseProperty {
   }
 
   name() {
-    return this.sequelizePath.field
+    return this.sequelizePath.fieldName
   }
 
   isEditable() {
